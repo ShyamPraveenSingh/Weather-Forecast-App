@@ -25,11 +25,6 @@ panel.place(x=0, y=520)
 
 
 
-
-
-
-
-
 #Date 
 
 dt = datetime.datetime.now() 
