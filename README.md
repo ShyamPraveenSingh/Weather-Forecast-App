@@ -13,6 +13,6 @@ Weather Forecast App using Pyhton.
 
 => Image Module Used : Pillow
 
-=> Api Response Module Used : Json,Requests
+=> Api Response Module Used : Json, Requests
 
 => Date & Time Module Used: datetime
