@@ -1,5 +1,7 @@
 # Weather-Forecast-App
 
+<b>Checkout this project article on GeeksforGeeks website [Create a GUI for Weather Forecast](https://www.geeksforgeeks.org/create-a-gui-for-weather-forecast-using-openweathermap-api-in-python/)</b>
+  
 <b>Weather Forecast Application</b>
 
 The idea of this project is to provide a simple GUI application to users to get the current temperature of any city they wish to see. The system also provides a simple user interface for simplification of application. It also provides an amazing UX for its users.
@@ -17,6 +19,7 @@ The modules required are tkinter, PIL, json, requests, datetime. We also need a 
 
 
 <p align="center">
+<img src="https://github.com/ShyamPraveenSingh/Weather-Forecast-App/blob/master/Seoul.png"> 
 <img src="https://github.com/ShyamPraveenSingh/Weather-Forecast-App/blob/master/chennai.png"> 
 </p>
 
