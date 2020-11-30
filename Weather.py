@@ -7,8 +7,6 @@ import json
 import datetime
 from PIL import ImageTk,Image
 
-
-
 #necessary details
 root = Tk()
 root.title("Weather App")
