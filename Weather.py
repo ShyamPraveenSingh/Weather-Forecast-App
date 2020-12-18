@@ -13,18 +13,12 @@ root.title("Weather App")
 root.geometry("450x700")
 root['background'] = "white"
 
-
 #Image
 new = ImageTk.PhotoImage(Image.open('logo.png'))
 panel = Label(root,image=new)
 panel.place(x=0, y=520)
 
-
-
-
-
 #Date 
-
 dt = datetime.datetime.now() 
 date = Label(root, text = dt.strftime('%A--'), bg='white', font=("bold",15))
 date.place(x=5, y=130)
@@ -32,7 +26,6 @@ month = Label(root, text = dt.strftime('%m %B'), bg='white', font=("bold",15))
 month.place(x=100, y=130)
 
 #Time
-
 hour = Label(root, text = dt.strftime('%I : %M %p'), bg='white', font=("bold",15))
 hour.place(x=10, y=160)
 
@@ -50,12 +43,8 @@ city_name = StringVar()
 city_entry = Entry(root, textvariable=city_name, width=45)
 city_entry.grid(row=1, column=0, ipady=10, stick=W+E+N+S)
 
-
-
-
 def city_name():
-   
-	#API Call
+   	#API Call
 	api_request = requests.get("https://api.openweathermap.org/data/2.5/weather?q=" + city_entry.get() + "&units=metric&appid=ce6a3ba3755fe67d075c64bcc797fcbb")
 	api = json.loads(api_request.content)
 
@@ -75,11 +64,6 @@ def city_name():
 	z = api['sys']
 	country = z['country']
 	citi = api['name']
-	
-
-
-
-
 
 	#Adding the info into the screen
 	lable_temp.configure(text=current_temprature)
@@ -94,9 +78,6 @@ def city_name():
 #Search Bar and Button
 city_nameButton = Button(root, text="Search", command=city_name)
 city_nameButton.grid(row=1, column=1, padx=5, stick=W+E+N+S)
-
-
-
 
 #Country  Names and Coordinates
 lable_citi = Label(root, text="...", width = 0, bg='white', font=("bold",15))
@@ -127,17 +108,12 @@ maxi.place(x=3,y=430)
 max_temp = Label(root, text="...", width = 0, bg='white', font=("bold",15))
 max_temp.place(x=128,y=430)
 
-
 mini = Label(root, text="Min. Temp.: ", width = 0, bg='white', font=("bold",15))
 mini.place(x=3,y=460)
 min_temp = Label(root, text="...", width = 0, bg='white', font=("bold",15))
 min_temp.place(x=128,y=460)
 
-
-
 note = Label(root, text="All temperatures in degree celsius", bg='white',font=("italic", 10))
 note.place(x=95, y=495)
-
-
 
 root.mainloop()
