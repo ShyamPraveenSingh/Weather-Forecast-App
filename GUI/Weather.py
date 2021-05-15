@@ -7,6 +7,9 @@ import json
 import datetime
 from PIL import ImageTk,Image
 
+#path variables
+directory = "../images/"
+
 #necessary details
 root = Tk()
 root.title("Weather App")
@@ -14,7 +17,7 @@ root.geometry("450x700")
 root['background'] = "white"
 
 #Image
-new = ImageTk.PhotoImage(Image.open('logo.png'))
+new = ImageTk.PhotoImage(Image.open(directory+'logo.png'))
 panel = Label(root,image=new)
 panel.place(x=0, y=520)
 
@@ -30,11 +33,11 @@ hour = Label(root, text = dt.strftime('%I : %M %p'), bg='white', font=("bold",15
 hour.place(x=10, y=160)
 
 if int((dt.strftime('%I'))) >= 8 & int((dt.strftime('%I'))) <=5 :
-	img = ImageTk.PhotoImage(Image.open('moon.png'))
+	img = ImageTk.PhotoImage(Image.open(directory+'moon.png'))
 	panel = Label(root,image=img)
 	panel.place(x=210,y=200)
 else:
-	img = ImageTk.PhotoImage(Image.open('sun.png'))
+	img = ImageTk.PhotoImage(Image.open(directory+'sun.png'))
 	panel = Label(root,image=img)
 	panel.place(x=210,y=200)
 
